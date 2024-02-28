@@ -86,14 +86,22 @@ export const shareCourseWebhook = async (req, res) => {
 };
 
 export const sendChat = async (req, res) => {
-  const sendChatWebhookUrl= process.env.Send_Chat_Webhook
+  const sendChatWebhookUrl= "https://dlms.app.n8n.cloud/webhook/6b79cdf1-4c0c-47a9-8a3a-a99159382e42/chat"
   try {
     const { userId, message } = req.body;
     if (!userId || !message) {
-      return res.status(400).json({
-        success: false,
-        error: "userId and message are required",
-      });
+      // return res.status(400).json({
+      //   success: false,
+      //   error: "userId and message are required",
+      // });
+    return   res.json({
+  success: true,
+  output:
+    response.data?.reply ||
+    response.data?.output ||
+    JSON.stringify(response.data) ||
+    "No response from bot",
+});
     }
 
     const payload = {
