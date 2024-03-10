@@ -23,3 +23,4 @@ router.route("/:courseId/live-lecture").post(isAuthenticated, createLiveLecture)
 router.route("/lecture/:lectureId/end").post(isAuthenticated, endLiveLecture);
 
 export default router;
+// course routes
