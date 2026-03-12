@@ -51,4 +51,4 @@ const courseSchema = new mongoose.Schema({
 }, {timestamps:true});
 
 export const Course = mongoose.model("Course", courseSchema);
-//this is cuse model assfsdfgdwew
+//this is cuse model assfsdfgdwewsderewert
